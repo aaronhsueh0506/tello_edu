@@ -60,10 +60,12 @@ descriptors = []
 # b=numpy.mean(numpy.load('tommy.npy'), axis=1)
 # c=numpy.mean(numpy.load('tony.npy'), axis=1)
 
+### read enroll data ###
 candidate = ['aaron', 'tommy', 'tony']
 for i in candidate:
     descriptors.append(numpy.mean(numpy.load(i + '.npy'), axis=0))
     
+### start verification ###
 while(video_capture.isOpened()):
     ret , frame = video_capture.read()
 
